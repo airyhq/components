@@ -1,4 +1,3 @@
-//@ts-nocheck
 import React, { useState } from "react";
 import { BrowserRouter } from "react-router-dom";
 
@@ -18,15 +17,14 @@ import {
   AiryLoader,
   AnalyticsLoader,
   SimpleLoader
-} from "components/src";
+} from "@airyhq/components";
+import '@airyhq/components/dist/main.css'
 
 import styles from "./index.module.scss";
 
 const App = () => {
   const [showErrorPopUp, setShowErrorPopUp] = useState(false);
-  const [showModalPopUp, setShowModalPopUp] = useState(false);
-  const [startDate, setStartDate] = useState(null);
-  const [endDate, setEndDate] = useState(null);
+  const [showModalPopUp, setShowModalPopUp] = useState(false);  
   const [dropdownOption, setDropdownOption] = useState("Dropdown");
   const [inputText, setInputText] = useState("");
   const [inputSecret, setInputSecret] = useState("");
@@ -192,9 +190,7 @@ const App = () => {
             name="newLabel"
             type="text"
             value={inputText}
-            onChange={(e: {
-              target: { value: React.SetStateAction<string> };
-            }) => setInputText(e.target.value)}
+            onChange={(e: any) => setInputText(e.target.value)}
             required={true}
             height={32}
             minLength={6}
@@ -209,9 +205,7 @@ const App = () => {
             name="newInputSecret"
             type="password"
             value={inputSecret}
-            onChange={(e: {
-              target: { value: React.SetStateAction<string> };
-            }) => setInputSecret(e.target.value)}
+            onChange={(e: any) => setInputSecret(e.target.value)}
             required={true}
             height={32}
             minLength={6}
@@ -228,18 +222,21 @@ const App = () => {
         </div>
         <div className={styles.item}>
           <h3>Text Area</h3>
-          {/* <TextArea
+          <TextArea
             label="Audience"
+            fontClass="font-m"
             placeholder="Set your audience here"
             name="audience"
             minRows={2}
             maxRows={10}
             maxLength={100}
             value={textAreaValue || ''}
-            onChange={e => {}}
-            required={false}
-            fontClass="font-base"
-          /> */}
+            onChange={(e: any) => setTextAreaValue(e.target.value)}
+            required={false}                                                      
+            minLength={1}
+            height={32}            
+            showCounter={false}
+          />
         </div>
         <div className={styles.item}>
           <h3>Toogle</h3>
@@ -258,7 +255,7 @@ const App = () => {
             fontClass="font-s"
             height={32}
             value={urlInput}
-            onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
+            onChange={(e: any) =>
               setUrlInput(e.target.value)
             }
           />
