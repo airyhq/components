@@ -207,9 +207,7 @@ const App = () => {
             name="newLabel"
             type="text"
             value={inputEmojiText}
-            onChange={(e: {
-              target: { value: React.SetStateAction<string> };
-            }) => setInputEmojiText(e.target.value)}
+            onChange={(e: any) => setInputEmojiText(e.target.value)}
             required={true}
             emoji={true}
             height={32}
