@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { BrowserRouter } from "react-router-dom";
+import "emoji-mart/css/emoji-mart.css";
 
 import {
   Button,
@@ -27,6 +28,7 @@ const App = () => {
   const [showModalPopUp, setShowModalPopUp] = useState(false);  
   const [dropdownOption, setDropdownOption] = useState("Dropdown");
   const [inputText, setInputText] = useState("");
+  const [inputEmojiText, setInputEmojiText] = useState("");
   const [inputSecret, setInputSecret] = useState("");
   const [searchValue, setSearchValue] = useState("");
   const [textAreaValue, setTextAreaValue] = useState("");
@@ -192,6 +194,24 @@ const App = () => {
             value={inputText}
             onChange={(e: any) => setInputText(e.target.value)}
             required={true}
+            height={32}
+            minLength={6}
+            fontClass="font-base"
+          />
+        </div>
+        <div className={styles.item}>
+          <h3>Input with Emoji</h3>
+          <Input
+            label="Label"
+            placeholder="Placeholder"
+            name="newLabel"
+            type="text"
+            value={inputEmojiText}
+            onChange={(e: {
+              target: { value: React.SetStateAction<string> };
+            }) => setInputEmojiText(e.target.value)}
+            required={true}
+            emoji={true}
             height={32}
             minLength={6}
             fontClass="font-base"
