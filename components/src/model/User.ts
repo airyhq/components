@@ -13,7 +13,7 @@ export interface User {
 export enum AUTH_STATE {
   NOT_AUTHENTICATED,
   REFRESHING,
-  AUTHENTICATED_AND_LOADED
+  AUTHENTICATED_AND_LOADED,
 }
 
 export const authState = (state: User) => {
@@ -25,7 +25,7 @@ export function userInitials(user: User) {
     return user.display_name.substring(0, 2);
   }
 
-  let result = "";
+  let result = '';
 
   if (user.first_name) {
     result += user.first_name.substring(0, 1);
@@ -39,5 +39,5 @@ export function userInitials(user: User) {
 }
 
 export function displayName(user: User) {
-  return user.display_name || user.first_name || user.last_name || "";
+  return user.display_name || user.first_name || user.last_name || '';
 }
