@@ -19,7 +19,7 @@ import {
   AnalyticsLoader,
   SimpleLoader
 } from "@airyhq/components";
-import '@airyhq/components/dist/main.css'
+import "@airyhq/components/dist/main.css";
 
 import styles from "./index.module.scss";
 
