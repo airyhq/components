@@ -1,6 +1,6 @@
 {
   "name": "@airyhq/components",
-  "version": "0.4.5",
+  "version": "0.4.6",
   "description": "Airy core UI components",
   "main": "dist/index.js",
   "typings": "src/index.d.ts",
