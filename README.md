@@ -1,4 +1,4 @@
-# Components
+# Airy React Components
 
 Here is a quick introduction to the frontend projects:
 
@@ -15,3 +15,26 @@ Here is a quick introduction to the frontend projects:
   components of the [Airy Components
   Library](https://www.npmjs.com/package/@airyhq/components), we host the `main`
   branch version at [https://components.airy.co](https://components.airy.co).
+
+## How to contribute
+
+We welcome (and love) every form of contribution! Good entry points to the
+project are:
+
+- Our [contributing guidelines](/CONTRIBUTING.md)
+- Issues with the tag
+  [gardening](https://github.com/airyhq/components/issues?q=is%3Aissue+is%3Aopen+label%3Agardening)
+- Issues with the tag [good first
+  patch](https://github.com/airyhq/components/issues?q=is%3Aissue+is%3Aopen+label%3A%22good+first+patch%22)
+
+If you're still not sure where to start, open a [new
+issue](https://github.com/airyhq/components/issues/new) and we'll gladly help you get
+started.
+
+
+## Code of Conduct
+
+To ensure a safe experience and a welcoming community, the Airy Core Platform
+project adheres to the [contributor
+convenant](https://www.contributor-covenant.org/) [code of
+conduct](/code_of_conduct.md).
