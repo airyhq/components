@@ -39,7 +39,7 @@ const App = () => {
     <div className={styles.container}>
       <h1 className={styles.title}>Airy Components Library Showcase</h1>
       <div className={styles.main}>
-        <h2 className={styles.sectionTitle}>Alerts</h2>
+               <h2 className={styles.sectionTitle}>Alerts</h2>
         <div className={styles.section}>
           <div className={styles.item}>
             <h3>Error PopUp</h3>
