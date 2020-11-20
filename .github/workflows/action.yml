@@ -11,4 +11,6 @@ jobs:
     - uses: actions/checkout@v1      
 
     - name: Prettify code
-      run: lint-ts
+      run: |
+      prettier './**/*.{ts,tsx}' --parser typescript --check
+      prettier './**/*.{css,scss}' --parser css --check
