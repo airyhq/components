@@ -19,6 +19,7 @@ jobs:
 
       - name: run CI
         run: |
+          cd showcase
           yarn install
           yarn lint
           yarn test
