@@ -13,4 +13,3 @@ jobs:
     - name: Prettify code
       run: |
       prettier './**/*.{ts,tsx}' --parser typescript --check
-      prettier './**/*.{css,scss}' --parser css --check
