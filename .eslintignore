@@ -1,0 +1,7 @@
+dist/
+bazel-*
+.ijwb/
+node_modules
+
+# Ignore script files in public web paths
+**/public/**

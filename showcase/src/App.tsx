@@ -1,6 +1,6 @@
-import React, { useState } from "react";
-import { BrowserRouter } from "react-router-dom";
-import "emoji-mart/css/emoji-mart.css";
+import React, {useState} from 'react';
+import {BrowserRouter} from 'react-router-dom';
+import 'emoji-mart/css/emoji-mart.css';
 
 import {
   Button,
@@ -17,23 +17,23 @@ import {
   UrlInputField,
   AiryLoader,
   AnalyticsLoader,
-  SimpleLoader
-} from "@airyhq/components";
-import "@airyhq/components/dist/main.css";
+  SimpleLoader,
+} from '@airyhq/components';
+import '@airyhq/components/dist/main.css';
 
-import styles from "./index.module.scss";
+import styles from './index.module.scss';
 
 const App = () => {
   const [showErrorPopUp, setShowErrorPopUp] = useState(false);
-  const [showModalPopUp, setShowModalPopUp] = useState(false);  
-  const [dropdownOption, setDropdownOption] = useState("Dropdown");
-  const [inputText, setInputText] = useState("");
-  const [inputEmojiText, setInputEmojiText] = useState("");
-  const [inputSecret, setInputSecret] = useState("");
-  const [searchValue, setSearchValue] = useState("");
-  const [textAreaValue, setTextAreaValue] = useState("");
+  const [showModalPopUp, setShowModalPopUp] = useState(false);
+  const [dropdownOption, setDropdownOption] = useState('Dropdown');
+  const [inputText, setInputText] = useState('');
+  const [inputEmojiText, setInputEmojiText] = useState('');
+  const [inputSecret, setInputSecret] = useState('');
+  const [searchValue, setSearchValue] = useState('');
+  const [textAreaValue, setTextAreaValue] = useState('');
   const [toggleValue, setToggleValue] = useState(false);
-  const [urlInput, setUrlInput] = useState("");
+  const [urlInput, setUrlInput] = useState('');
 
   return (
     <div className={styles.container}>
@@ -43,25 +43,16 @@ const App = () => {
         <div className={styles.section}>
           <div className={styles.item}>
             <h3>Error PopUp</h3>
-            <Button
-              styleVariant="outline-big"
-              type="submit"
-              onClick={() => setShowErrorPopUp(true)}
-            >
+            <Button styleVariant="outline-big" type="submit" onClick={() => setShowErrorPopUp(true)}>
               Show Error PopUp
             </Button>
             {showErrorPopUp && (
-              <ErrorPopUp
-                message="This in an error message popup"
-                closeHandler={() => setShowErrorPopUp(false)}
-              />
+              <ErrorPopUp message="This in an error message popup" closeHandler={() => setShowErrorPopUp(false)} />
             )}
           </div>
           <div className={styles.item}>
             <h3>Error notice warning</h3>
-            <ErrorNotice theme="warning">
-              This in an warning message
-            </ErrorNotice>
+            <ErrorNotice theme="warning">This in an warning message</ErrorNotice>
           </div>
           <div className={styles.item}>
             <h3>Error notice error</h3>
@@ -69,19 +60,11 @@ const App = () => {
           </div>
           <div className={styles.item}>
             <h3>Error setting modal</h3>
-            <Button
-              styleVariant="outline-big"
-              type="submit"
-              onClick={() => setShowModalPopUp(true)}
-            >
+            <Button styleVariant="outline-big" type="submit" onClick={() => setShowModalPopUp(true)}>
               Show Settings Modal
             </Button>
             {showModalPopUp && (
-              <SettingsModal
-                style={{ maxWidth: "420px" }}
-                title="Settings Modal"
-                close={() => setShowModalPopUp(false)}
-              >
+              <SettingsModal style={{maxWidth: '420px'}} title="Settings Modal" close={() => setShowModalPopUp(false)}>
                 <p>This is a modal</p>
                 <p>This is a modal</p>
                 <p>This is a modal</p>
@@ -93,69 +76,43 @@ const App = () => {
         <div className={styles.section}>
           <div className={styles.item}>
             <h3>Normal</h3>
-            <Button
-              styleVariant="normal"
-              type="submit"
-              onClick={() => alert("Button Pressed")}
-            >
+            <Button styleVariant="normal" type="submit" onClick={() => alert('Button Pressed')}>
               Button
             </Button>
           </div>
           <div className={styles.item}>
             <h3>Small</h3>
-            <Button
-              styleVariant="small"
-              type="submit"
-              onClick={() => alert("Button Pressed")}
-            >
+            <Button styleVariant="small" type="submit" onClick={() => alert('Button Pressed')}>
               Button
             </Button>
           </div>
           <div className={styles.item}>
             <h3>Outline normal</h3>
-            <Button
-              styleVariant="outline"
-              type="submit"
-              onClick={() => alert("Button Pressed")}
-            >
+            <Button styleVariant="outline" type="submit" onClick={() => alert('Button Pressed')}>
               Button
             </Button>
           </div>
           <div className={styles.item}>
             <h3>Outline big</h3>
-            <Button
-              styleVariant="outline-big"
-              type="submit"
-              onClick={() => alert("Button Pressed")}
-            >
+            <Button styleVariant="outline-big" type="submit" onClick={() => alert('Button Pressed')}>
               Button
             </Button>
           </div>
           <div className={styles.item}>
             <h3>Warning</h3>
-            <Button
-              styleVariant="warning"
-              type="submit"
-              onClick={() => alert("Button Pressed")}
-            >
+            <Button styleVariant="warning" type="submit" onClick={() => alert('Button Pressed')}>
               Button
             </Button>
           </div>
           <div className={styles.item}>
             <h3>Text</h3>
-            <Button
-              styleVariant="text"
-              type="submit"
-              onClick={() => alert("Button Pressed")}
-            >
+            <Button styleVariant="text" type="submit" onClick={() => alert('Button Pressed')}>
               Button
             </Button>
           </div>
           <div className={styles.item}>
             <h3>Link</h3>
-            <LinkButton onClick={() => alert("Button Pressed")}>
-              Button
-            </LinkButton>
+            <LinkButton onClick={() => alert('Button Pressed')}>Button</LinkButton>
           </div>
           <div className={styles.item}>
             <h3>Href</h3>
@@ -171,13 +128,7 @@ const App = () => {
           <h3>Dropdown</h3>
           <Dropdown
             variant="default"
-            options={[
-              "Dropdown",
-              "Option A",
-              "Option B",
-              "Option C",
-              "Option D"
-            ]}
+            options={['Dropdown', 'Option A', 'Option B', 'Option C', 'Option D']}
             onClick={(item: string) => {
               setDropdownOption(item);
             }}
@@ -250,9 +201,9 @@ const App = () => {
             maxLength={100}
             value={textAreaValue || ''}
             onChange={(e: any) => setTextAreaValue(e.target.value)}
-            required={false}                                                      
+            required={false}
             minLength={1}
-            height={32}            
+            height={32}
             showCounter={false}
           />
         </div>
@@ -273,9 +224,7 @@ const App = () => {
             fontClass="font-s"
             height={32}
             value={urlInput}
-            onChange={(e: any) =>
-              setUrlInput(e.target.value)
-            }
+            onChange={(e: any) => setUrlInput(e.target.value)}
           />
         </div>
       </div>
