@@ -11,4 +11,4 @@ jobs:
       uses: actions/checkout@v1      
 
     - name: Prettify code
-      uses: prettier './**/*.{ts,tsx}' --parser typescript --check
+      uses: lint-ts
