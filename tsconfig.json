@@ -15,6 +15,7 @@
     "isolatedModules": true,
     "sourceMap": true,
     "jsx": "react",
+    "declaration": true,
   },
   "files": [
     "./types/global.d.ts"
