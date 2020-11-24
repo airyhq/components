@@ -22,5 +22,4 @@ jobs:
           cd showcase
           yarn install
           yarn lint
-          yarn test
           yarn build
