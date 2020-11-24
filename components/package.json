@@ -11,7 +11,7 @@
   "scripts": {
     "build": "webpack",
     "release": "yarn run build && npm publish",
-    "ci_components": "yarn install && yarn lint",
+    "ci": "yarn install && yarn lint",
     "format": "prettier './**/*.{ts,tsx}' --parser typescript --write && prettier './**/*.{css,scss}' --parser css --write",    
     "lint": "prettier './**/*.{ts,tsx}' --parser typescript --check && prettier './**/*.{css,scss}' --parser css --check"
   },
