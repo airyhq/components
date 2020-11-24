@@ -1,22 +1,22 @@
-import React, { Component } from "react";
-import TextareaAutosize from "react-autosize-textarea";
+import React, {Component} from 'react';
+import TextareaAutosize from 'react-autosize-textarea';
 
-import { Input, InputProps } from "../Input";
-import styles from "./style.module.scss";
+import {Input, InputProps} from '../Input';
+import styles from './style.module.scss';
 
 class TextAreaComponent extends Component<IProps & InputProps> {
-  classForState = currentValidationState => {
+  classForState = (currentValidationState) => {
     switch (currentValidationState) {
-      case "inputInvalid":
+      case 'inputInvalid':
         return styles.inputInvalid;
-      case "inputValid":
+      case 'inputValid':
         return styles.inputValid;
       default:
-        return "";
+        return '';
     }
   };
 
-  renderComponent = props => {
+  renderComponent = (props) => {
     const {
       id,
       inputRef,
@@ -31,11 +31,10 @@ class TextAreaComponent extends Component<IProps & InputProps> {
       maxLength,
       required,
       fontClass,
-      currentValidationState
+      currentValidationState,
     } = props;
 
-    const inputClass = `${styles.textarea} ${fontClass ||
-      "font-l"} ${this.classForState(currentValidationState)}`;
+    const inputClass = `${styles.textarea} ${fontClass || 'font-l'} ${this.classForState(currentValidationState)}`;
     return (
       <TextareaAutosize
         id={id}
