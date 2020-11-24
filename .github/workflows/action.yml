@@ -17,9 +17,10 @@ jobs:
         with:
           node_version: ${{ matrix.node_version }}
 
-      - name: run CI
+      - name: linting in showcase
+        run: |          
+          yarn ci          
+
+      - name: linting in components
         run: |
-          cd showcase
-          yarn install
-          yarn lint
-          yarn build
+          yarn ci          

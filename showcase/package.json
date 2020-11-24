@@ -25,7 +25,8 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",    
-    "format": "prettier --write src/**/*.ts{,x}",
+    "ci": "cd showcase && yarn install && yarn lint && yarn build",
+    "format": "prettier --write src/**/*.ts{,x}",    
     "lint": "prettier './**/*.{ts,tsx}' --parser typescript --check && prettier './**/*.{css,scss}' --parser css --check"
   },
   "devDependencies": {    

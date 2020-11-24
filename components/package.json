@@ -11,7 +11,8 @@
   "scripts": {
     "build": "webpack",
     "release": "yarn run build && npm publish",
-    "prettier:check": "prettier --check '**/*.{ts,scss}'",
+    "ci": "cd components && yarn lint",
+    "lint": "prettier --check '**/*.{ts,scss}'",
     "prettier:fix": "prettier --write '**/*.{ts,scss}'"
   },
   "dependencies": {
