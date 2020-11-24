@@ -40,8 +40,8 @@ You can check the code with the following commands:
 
 ```
 $ cd components
-$ yarn prettier:check # and if there are problems
-$ yarn prettier:fix
+$ yarn lint # and if there are problems
+$ yarn format
 ```
 
 ## Squashing your commits
