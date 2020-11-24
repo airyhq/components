@@ -5,7 +5,7 @@ export const UrlInputField = ({onKeyDown, onChange, ...props}: InputProps) => {
   const inputRef = useRef(null);
   const [value, setValue] = useState(props.value);
 
-  const updateUrl = (event) => {
+  const updateUrl = event => {
     const element = event.target;
     if (element.value.length > 0 && !element.value.match(/http(s)?:\/\//)) {
       element.value = `http://${element.value}`;
@@ -16,7 +16,7 @@ export const UrlInputField = ({onKeyDown, onChange, ...props}: InputProps) => {
     }
   };
 
-  const keyDown = (event) => {
+  const keyDown = event => {
     if (event.key === 'Enter') {
       updateUrl(event);
     }

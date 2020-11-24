@@ -7,7 +7,7 @@ export const Dropdown = ({text, options, variant, onClick}) => {
   const componentEl = useRef(null);
   const buttonEl = useRef(null);
 
-  const styleFor = (variant) => {
+  const styleFor = variant => {
     switch (variant) {
       case 'borderless':
         return styles.borderlessButton;
@@ -17,14 +17,14 @@ export const Dropdown = ({text, options, variant, onClick}) => {
   };
 
   const showDropdown = useCallback(
-    (dropdownVisible) => {
+    dropdownVisible => {
       setDropdownVisible(dropdownVisible);
     },
     [dropdownVisible, setDropdownVisible, buttonEl]
   );
 
   const itemSelected = useCallback(
-    (option) => {
+    option => {
       showDropdown(false);
       onClick(option);
     },
@@ -32,7 +32,7 @@ export const Dropdown = ({text, options, variant, onClick}) => {
   );
 
   const keyDownHandler = useCallback(
-    (e) => {
+    e => {
       if (e.key === 'Escape') {
         showDropdown(false);
       }
@@ -41,7 +41,7 @@ export const Dropdown = ({text, options, variant, onClick}) => {
   );
 
   const eventHandler = useCallback(
-    (e) => {
+    e => {
       if (componentEl.current && !componentEl.current.contains(e.target)) {
         showDropdown(false);
       }
@@ -69,7 +69,7 @@ export const Dropdown = ({text, options, variant, onClick}) => {
       </button>
       {dropdownVisible && (
         <div className={styles.dropDown}>
-          {options.map((option) => (
+          {options.map(option => (
             <button type="button" key={option} className={styles.item} onClick={() => itemSelected(option)}>
               {option}
             </button>

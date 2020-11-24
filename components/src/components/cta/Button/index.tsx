@@ -3,7 +3,7 @@ import React, {ReactNode} from 'react';
 import styles from './style.module.scss';
 
 export const Button = ({children, onClick, type, styleVariant, disabled, tabIndex}: buttonProps) => {
-  const styleFor = (variant) => {
+  const styleFor = variant => {
     switch (variant) {
       case 'small':
         return styles.smallButton;

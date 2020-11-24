@@ -32,7 +32,7 @@ export const SearchField = ({id, placeholder, value, setValue, resetClicked, aut
         id={id}
         placeholder={placeholder}
         value={value}
-        onChange={(event) => setValue(event.target.value)}
+        onChange={event => setValue(event.target.value)}
         type="search"
         autoFocus={autoFocus}
       />

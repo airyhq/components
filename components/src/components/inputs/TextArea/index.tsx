@@ -5,7 +5,7 @@ import {Input, InputProps} from '../Input';
 import styles from './style.module.scss';
 
 class TextAreaComponent extends Component<IProps & InputProps> {
-  classForState = (currentValidationState) => {
+  classForState = currentValidationState => {
     switch (currentValidationState) {
       case 'inputInvalid':
         return styles.inputInvalid;
@@ -16,7 +16,7 @@ class TextAreaComponent extends Component<IProps & InputProps> {
     }
   };
 
-  renderComponent = (props) => {
+  renderComponent = props => {
     const {
       id,
       inputRef,

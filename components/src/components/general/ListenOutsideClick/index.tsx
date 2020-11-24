@@ -10,7 +10,7 @@ const ListenOutsideClick = ({children, className, onOuterClick}: ListenOutsideCl
   const innerRef = useRef(null);
 
   useEffect(() => {
-    const handleClick = (event) => {
+    const handleClick = event => {
       innerRef.current && !innerRef.current.contains(event.target) && onOuterClick(event);
     };
 

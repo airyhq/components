@@ -19,8 +19,10 @@ jobs:
 
       - name: linting in showcase
         run: |          
-          yarn ci          
+          cd showcase
+          yarn ci
 
       - name: linting in components
         run: |
-          yarn ci          
+          cd components
+          yarn ci

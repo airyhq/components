@@ -36,7 +36,7 @@ class InputComponent extends Component<InputProps, IState> {
     }
   };
 
-  componentDidUpdate = (prevProps) => {
+  componentDidUpdate = prevProps => {
     const inputRef = this.props.inputRef || this.inputRef;
     if ((inputRef.current && !prevProps.showErrors && this.props.showErrors) || this.props.value !== prevProps.value) {
       this.validateInput(inputRef.current);
@@ -53,7 +53,7 @@ class InputComponent extends Component<InputProps, IState> {
     }
   };
 
-  checkWithHTML5Validation = (inputElement) => {
+  checkWithHTML5Validation = inputElement => {
     if (inputElement === null || !this.hasValidations()) {
       return;
     }
@@ -89,7 +89,7 @@ class InputComponent extends Component<InputProps, IState> {
     }
   };
 
-  checkWithURLValidation = (inputElement) => {
+  checkWithURLValidation = inputElement => {
     this.checkWithHTML5Validation(inputElement);
 
     /**
@@ -211,14 +211,14 @@ class InputComponent extends Component<InputProps, IState> {
     }
   };
 
-  handleEmojiOutsideClick = (e) => {
+  handleEmojiOutsideClick = e => {
     if (this.node && this.node.contains(e.target)) {
       return;
     }
     this.handleEmojiDrawer();
   };
 
-  addEmoji = (emoji) => {
+  addEmoji = emoji => {
     let message = emoji.native;
     const inputRef = this.props.inputRef || this.inputRef;
     if (this.props.value) {
@@ -238,7 +238,7 @@ class InputComponent extends Component<InputProps, IState> {
   emojiDrawer = () => {
     return (
       <div
-        ref={(node) => {
+        ref={node => {
           this.node = node;
         }}
         className={styles.emojiDrawer}>

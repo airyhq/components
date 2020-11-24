@@ -8,7 +8,7 @@ type ToggleType = {
 };
 
 export const Toggle = ({value, text, updateValue}: ToggleType) => {
-  const onCheckboxChange = (event) => {
+  const onCheckboxChange = event => {
     updateValue(event.target.checked);
   };
   return (
