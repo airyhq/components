@@ -78,7 +78,7 @@ class InputComponent extends Component<InputProps, IState> {
     return this.props.required || this.props.minLength || this.props.maxLength || this.props.validation;
   };
 
-  checkWithValidationFunction = (inputElement) => {
+  checkWithValidationFunction = inputElement => {
     const {validation} = this.props;
     const validationResult = validation(inputElement.value);
     this.setState({validationResult: validationResult});
@@ -109,7 +109,7 @@ class InputComponent extends Component<InputProps, IState> {
     }
   };
 
-  validateInput = (inputElement) => {
+  validateInput = inputElement => {
     const {validation, type} = this.props;
     if (validation) {
       this.checkWithValidationFunction(inputElement);
@@ -120,7 +120,7 @@ class InputComponent extends Component<InputProps, IState> {
     }
   };
 
-  onChange = (event) => {
+  onChange = event => {
     const {onChange} = this.props;
     this.validateInput(event.target);
     if (onChange) {
@@ -128,7 +128,7 @@ class InputComponent extends Component<InputProps, IState> {
     }
   };
 
-  onBlur = (event) => {
+  onBlur = event => {
     const {onBlur} = this.props;
     this.setState({wasBlurred: true});
     this.validateInput(event.target);
@@ -205,7 +205,7 @@ class InputComponent extends Component<InputProps, IState> {
     this.setState({isShowingEmojiDrawer: !this.state.isShowingEmojiDrawer});
   };
 
-  handleEmojiKeyEvent = (e) => {
+  handleEmojiKeyEvent = e => {
     if (e.key === 'Escape') {
       this.handleEmojiDrawer();
     }
@@ -246,7 +246,7 @@ class InputComponent extends Component<InputProps, IState> {
           showPreview={false}
           onSelect={this.addEmoji}
           title="Emoji"
-          style={{right: '0px', position: 'absolute', bottom: '46px'}}
+          style={{right: '28px', position: 'absolute', bottom: '-84px'}}
         />
       </div>
     );

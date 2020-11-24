@@ -142,5 +142,21 @@ module.exports = (env, argv) => ({
       openAnalyzer: false,
     }),
     new OptimizeCSSAssetsPlugin(),
+    new DtsBundlePlugin(),
   ],
 });
+
+function DtsBundlePlugin() {}
+DtsBundlePlugin.prototype.apply = function(compiler) {
+  compiler.plugin('done', function() {
+    var dts = require('dts-bundle');
+
+    dts.bundle({
+      name: '@airyhq/components',
+      main: 'src/index.d.ts',
+      out: '../dist/index.d.ts',
+      removeSource: true,
+      outputAsModuleFolder: true, // to use npm in-package typings
+    });
+  });
+};
