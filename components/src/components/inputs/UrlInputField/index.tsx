@@ -1,11 +1,7 @@
-import React, { useRef, useState } from "react";
-import { Input, InputProps } from "../Input";
+import React, {useRef, useState} from 'react';
+import {Input, InputProps} from '../Input';
 
-export const UrlInputField = ({
-  onKeyDown,
-  onChange,
-  ...props
-}: InputProps) => {
+export const UrlInputField = ({onKeyDown, onChange, ...props}: InputProps) => {
   const inputRef = useRef(null);
   const [value, setValue] = useState(props.value);
 
@@ -21,7 +17,7 @@ export const UrlInputField = ({
   };
 
   const keyDown = event => {
-    if (event.key === "Enter") {
+    if (event.key === 'Enter') {
       updateUrl(event);
     }
     if (onKeyDown) {

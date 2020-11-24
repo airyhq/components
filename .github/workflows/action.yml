@@ -1,15 +1,28 @@
 name: CI
 
-on:
-  push: {}
+on: [push]
 
 jobs:
-  prettier:
-    runs-on: ubuntu-latest
+  build:
+    name: Build
+    runs-on: ubuntu-18.04
+    strategy:
+      matrix:
+        node_version: [14]
 
-    steps:    
-    - uses: actions/checkout@v1      
+    steps:
+      - uses: actions/checkout@v1
+      - name: Use Node.js ${{ matrix.node_version }}
+        uses: actions/setup-node@v1
+        with:
+          node_version: ${{ matrix.node_version }}
 
-    - name: Prettify code
-      run: |
-      prettier './**/*.{ts,tsx}' --parser typescript --check
+      - name: linting in showcase
+        run: |          
+          cd showcase
+          yarn ci
+
+      - name: linting in components
+        run: |
+          cd components
+          yarn ci

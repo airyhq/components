@@ -11,8 +11,9 @@
   "scripts": {
     "build": "webpack",
     "release": "yarn run build && npm publish",
-    "prettier:check": "prettier --check '**/*.{ts,scss}'",
-    "prettier:fix": "prettier --write '**/*.{ts,scss}'"
+    "ci": "yarn install && yarn lint",
+    "format": "prettier './**/*.{ts,tsx}' --parser typescript --write && prettier './**/*.{css,scss}' --parser css --write",    
+    "lint": "prettier './**/*.{ts,tsx}' --parser typescript --check && prettier './**/*.{css,scss}' --parser css --check"
   },
   "dependencies": {
     "@crello/react-lottie": "^0.0.9",
