@@ -1,9 +1,10 @@
 {
   "name": "@airyhq/components",
-  "version": "0.4.6",
+  "version": "0.4.8",
   "description": "Airy React Components",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
+  "typings": "dist/index.d.ts",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/airyhq/components.git"
