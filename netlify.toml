@@ -1,5 +1,5 @@
 [[redirects]]
-  from = "/*"
-  to = "/components"
+  from = "/docs"
+  to = "https://docs.airy.co"
   status = 200
   force = true
