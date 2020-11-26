@@ -1,7 +1,7 @@
 # Airy React Components
 
 The Airy React Components has been extracted from the 
-[Airy Core Platform](https://github.com/airyhq/airy), wan open source, fully-featured, production ready 
+[Airy Core Platform](https://github.com/airyhq/airy), an open source, fully-featured, production ready 
 messaging platform to process conversational data from a variety of sources
 (like Facebook Messenger, Google Business Messages, Website Live Chat, and
 more). For more information about the project, see [https://docs.airy.co](https://docs.airy.co)
