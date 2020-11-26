@@ -2,10 +2,10 @@
 # yarn lockfile v1
 
 
-"@airyhq/components@0.4.5":
-  version "0.4.5"
-  resolved "https://registry.yarnpkg.com/@airyhq/components/-/components-0.4.5.tgz#26fb7281042b572a9bae29dce736a4879ad8b43d"
-  integrity sha512-x65mL8nh1V3/7UpXo6BskfLVvknBk/NU3FAx4XVUOt+EX4P0NFYxTaPInBGU9UkkKt5u9FPTn4YxyMrtWY5DSA==
+"@airyhq/components@latest":
+  version "0.4.8"
+  resolved "https://registry.yarnpkg.com/@airyhq/components/-/components-0.4.8.tgz#5fca05ebbcd1195d70075b35c1f48cc32b3b0056"
+  integrity sha512-qxdNLgMukxHq5cFacdOTPRC/Km8zHrJf0y2UoE0KcCfPMc7dzh1ziM5EFoHtxsIQJkhPlzcYyNaZxA6IpTdBLQ==
   dependencies:
     "@crello/react-lottie" "^0.0.9"
     emoji-mart "^3.0.0"
