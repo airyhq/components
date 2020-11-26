@@ -1,5 +1,0 @@
-[[redirects]]
-  from = "/docs"
-  to = "https://docs.airy.co"
-  status = 200
-  force = true
