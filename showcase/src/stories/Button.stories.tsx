@@ -5,21 +5,21 @@ import { Story, Meta } from '@storybook/react/types-6-0';
 import '@airyhq/components/dist/main.css';
 import { Button } from '@airyhq/components';
 
+type ButtonProps = React.ComponentProps<typeof Button>;
+
 export default {
   title: 'Example/Button',
   component: Button,
+  argTypes: {
+    styleVariant: {control: {type: 'select', options: ['small', 'outline']}}
+  }
 } as Meta;
 
-const Template: Story<any> = (args) => <Button {...args} >click me</Button>;
 
-export const Small = Template.bind({});
-Small.args = {
-  styleVariant: 'small',
-  type: 'submit',
-};
+const Template: Story<ButtonProps> = (args) => <Button {...args} >click me</Button>;
 
-export const Normal = Template.bind({});
-Normal.args = {
-  styleVariant: 'normal',
+export const Submit = Template.bind({});
+Submit.args = {
   type: 'submit',
+  styleVariant: 'small'
 };
