@@ -10,6 +10,9 @@ type LinkButtonProps = React.ComponentProps<typeof LinkButton>;
 export default {
   title: 'Example/Link Button',
   component: LinkButton,
+  argTypes: {
+    children: { control: 'text' },
+  },
   parameters: {
     componentSubtitle: 'A button that looks like a link',
     actions: {
@@ -18,11 +21,12 @@ export default {
   },
 } as Meta;
 
-const Template: Story<LinkButtonProps> = (args) => <LinkButton {...args} >click me</LinkButton>;
+const Template: Story<LinkButtonProps> = (args) => <LinkButton {...args} >{args.children}</LinkButton>;
 
 export const Default = Template.bind({});
 Default.args = {
-  type: 'button',
+  children: 'click me'
 };
+
 
 
