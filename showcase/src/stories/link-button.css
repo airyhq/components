@@ -1,0 +1,10 @@
+.storybook-link-button {
+    font-family: 'Nunito Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    border: 0;
+    padding: 0;
+    background-color: white;
+    cursor: pointer;
+    text-decoration: underline;
+    color: var(--color-airy-blue);
+  }
+  
