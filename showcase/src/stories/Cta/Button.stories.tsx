@@ -11,7 +11,7 @@ export default {
   title: 'Airy Component/Buttons',
   component: Button,
   parameters: {
-    componentSubtitle: 'Buttons available in Airy components',
+    componentSubtitle: 'A Button component.',
     actions: {
       handles: ['click'],
     },
@@ -26,8 +26,8 @@ export default {
 
 const Template: Story<ButtonProps> = args => <Button {...args}>Click Me</Button>;
 
-export const SubmitButtons = Template.bind({});
-SubmitButtons.args = {
+export const ButtonComponent = Template.bind({});
+ButtonComponent.args = {
   type: 'submit',
   styleVariant: 'normal',
 };

@@ -7,10 +7,14 @@ import {TextArea} from '@airyhq/components';
 type TextAreaProps = React.ComponentProps<typeof TextArea>;
 
 export default {
-  title: 'Airy Component/ Text Area',
+  title: 'Airy Component/Textarea',
   component: TextArea,
   parameters: {
-    componentSubtitle: 'This input allows lines of text to be entered',
+    componentSubtitle: `This is a textarea input component. It accepts the same parameters
+    as the Input component and acts the same way with validations.
+    
+    The textarea will automatically grow the height based on the content
+    inside of it.`,
   },
   argTypes: {
     label: {control: 'text'},

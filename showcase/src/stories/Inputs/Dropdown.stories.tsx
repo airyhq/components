@@ -9,7 +9,7 @@ export default {
   title: 'Airy Component/Dropdown',
   component: Dropdown,
   parameters: {
-    componentSubtitle: 'This menu provides multiple options for the user to choose from’',
+    componentSubtitle: 'This menu provides multiple options for the user to choose from',
   },
   argTypes: {
     options: {control: {type: 'select', options: ['Dropdown', 'Option A', 'Option B', 'Option C', 'Option D']}},

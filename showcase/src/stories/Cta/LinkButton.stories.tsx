@@ -23,7 +23,7 @@ export default {
 
 const Template: Story<LinkButtonProps> = args => <LinkButton {...args}>{args.children}</LinkButton>;
 
-export const LinkButtons = Template.bind({});
-LinkButtons.args = {
+export const LinkButtonComponent = Template.bind({});
+LinkButtonComponent.args = {
   children: 'click me',
 };

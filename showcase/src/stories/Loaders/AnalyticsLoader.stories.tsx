@@ -9,9 +9,6 @@ type AnalyticsLoaderProps = React.ComponentProps<typeof AnalyticsLoader>;
 export default {
   title: 'Airy Component/ Loaders',
   component: AnalyticsLoader,
-  parameters: {
-    componentSubtitle: 'Airy Analytics Loader',
-  },
 } as Meta;
 
 const Template: Story<AnalyticsLoaderProps> = () => <AnalyticsLoader />;
