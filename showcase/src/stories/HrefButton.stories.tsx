@@ -5,7 +5,7 @@ import '@airyhq/components/dist/main.css';
 import {HrefButton} from '@airyhq/components';
 
 export default {
-  title: 'Example/Href Button',
+  title: 'Airy Component/Buttons',
   component: HrefButton,
 } as Meta;
 

@@ -8,7 +8,7 @@ import {Input} from '@airyhq/components';
 type InputProps = React.ComponentProps<typeof Input>;
 
 export default {
-  title: 'Example/Inputs',
+  title: 'Airy Component/Inputs',
   component: Input,
 } as Meta;
 

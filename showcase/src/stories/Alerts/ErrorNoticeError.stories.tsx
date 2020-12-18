@@ -8,7 +8,7 @@ import {ErrorNotice} from '@airyhq/components';
 type ErrorNoticeProps = React.ComponentProps<typeof ErrorNotice>;
 
 export default {
-  title: 'Example/Alerts',
+  title: 'Airy Component/Alerts',
   component: ErrorNotice,
 } as Meta;
 

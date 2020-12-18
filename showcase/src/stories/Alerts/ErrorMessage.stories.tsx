@@ -1,14 +1,12 @@
 import React from 'react';
-// also exported from '@storybook/react' if you can deal with breaking changes in 6.1
 import {Meta, Story} from '@storybook/react/types-6-0';
-
 import '@airyhq/components/dist/main.css';
 import {ErrorMessage} from '@airyhq/components';
 
 type ErrorMessageProps = React.ComponentProps<typeof ErrorMessage>;
 
 export default {
-  title: 'Example/Alerts',
+  title: 'Airy Component/Alerts',
   component: ErrorMessage,
 } as Meta;
 

@@ -6,7 +6,7 @@ import '@airyhq/components/dist/main.css';
 import {Dropdown} from '@airyhq/components';
 type DropdownProps = React.ComponentProps<typeof Dropdown>;
 export default {
-  title: 'Example/Dropdown',
+  title: 'Airy Component/Dropdown',
   component: Dropdown,
   parameters: {
     componentSubtitle: 'This menu provides multiple options for the user to choose from’',

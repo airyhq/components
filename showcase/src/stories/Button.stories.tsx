@@ -8,7 +8,7 @@ import {Button} from '@airyhq/components';
 type ButtonProps = React.ComponentProps<typeof Button>;
 
 export default {
-  title: 'Example/Button',
+  title: 'Airy Component/Buttons',
   component: Button,
   parameters: {
     componentSubtitle: 'Buttons available in Airy components',
@@ -17,6 +17,7 @@ export default {
     },
   },
   argTypes: {
+    type: {control: {type: 'select', options: ['submit', 'button', 'reset']}},
     styleVariant: {
       control: {type: 'select', options: ['normal', 'small', 'outline', 'outline-big', 'warning', 'text']},
     },

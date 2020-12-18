@@ -8,7 +8,7 @@ import {LinkButton} from '@airyhq/components';
 type LinkButtonProps = React.ComponentProps<typeof LinkButton>;
 
 export default {
-  title: 'Example/Link Button',
+  title: 'Airy Component/Buttons',
   component: LinkButton,
   argTypes: {
     children: {control: 'text'},
@@ -23,7 +23,7 @@ export default {
 
 const Template: Story<LinkButtonProps> = args => <LinkButton {...args}>{args.children}</LinkButton>;
 
-export const Default = Template.bind({});
-Default.args = {
+export const LinkButtons = Template.bind({});
+LinkButtons.args = {
   children: 'click me',
 };

@@ -8,7 +8,7 @@ import {UrlInputField} from '@airyhq/components';
 type UrlInputFieldProps = React.ComponentProps<typeof UrlInputField>;
 
 export default {
-  title: 'Example/URL Input',
+  title: 'Airy Component/URL Input',
   component: UrlInputField,
   parameters: {
     componentSubtitle: `This is a modified input field that accepts URLs. It also

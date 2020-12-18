@@ -8,7 +8,7 @@ import {Button, SettingsModal} from '@airyhq/components';
 type SettingsModalProps = React.ComponentProps<typeof SettingsModal>;
 
 export default {
-  title: 'Example/Alerts',
+  title: 'Airy Component/Alerts',
   component: SettingsModal,
 } as Meta;
 

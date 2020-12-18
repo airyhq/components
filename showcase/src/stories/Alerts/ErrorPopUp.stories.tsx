@@ -8,7 +8,7 @@ import {Button, ErrorPopUp} from '@airyhq/components';
 type ErrorPopUpProps = React.ComponentProps<typeof ErrorPopUp>;
 
 export default {
-  title: 'Example/Alerts',
+  title: 'Airy Component/Alerts',
   component: ErrorPopUp,
   parameters: {
     actions: {

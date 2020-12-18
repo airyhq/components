@@ -7,15 +7,13 @@ import {TextArea} from '@airyhq/components';
 type TextAreaProps = React.ComponentProps<typeof TextArea>;
 
 export default {
-  title: 'Example/ Text Area',
+  title: 'Airy Component/ Text Area',
   component: TextArea,
   parameters: {
     componentSubtitle: 'This input allows lines of text to be entered',
   },
   argTypes: {
     label: {control: 'text'},
-
-    fontClass: {control: {type: 'select', options: ['font-base', 'font-s', 'font-m', 'font-l', 'font-xl', 'font-xxl']}},
   },
 } as Meta;
 
@@ -29,12 +27,11 @@ DefaultTextArea.args = {
   placeholder: 'Set your audience here',
   name: 'audience',
   type: 'text',
-  fontClass: 'font-m',
-  minRows: 2,
-  maxRows: 10,
   maxLength: 100,
   required: true,
   minLength: 1,
-  height: 32,
+  height: 42,
   showCounter: true,
+  hideLabel: false,
+  checked: true,
 };

@@ -7,7 +7,7 @@ import {SimpleLoader} from '@airyhq/components';
 type SimpleLoaderProps = React.ComponentProps<typeof SimpleLoader>;
 
 export default {
-  title: 'Example/ Loaders',
+  title: 'Airy Component/ Loaders',
   component: SimpleLoader,
   parameters: {
     componentSubtitle: '',

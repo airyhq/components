@@ -8,7 +8,7 @@ import {Toggle} from '@airyhq/components';
 type ToggleProps = React.ComponentProps<typeof Toggle>;
 
 export default {
-  title: 'Example/Toggle',
+  title: 'Airy Component/Toggle',
   component: Toggle,
   parameters: {
     componentSubtitle: 'A toggle input component.',
