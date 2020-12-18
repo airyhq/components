@@ -19,7 +19,6 @@ export default {
   },
   argTypes: {
     label: {control: 'text'},
-
     type: {control: {type: 'select', options: ['text', 'email', 'password']}},
     fontClass: {control: {type: 'select', options: ['font-base', 'font-s', 'font-m', 'font-l', 'font-xl', 'font-xxl']}},
     inputmode: {
@@ -27,8 +26,6 @@ export default {
     },
   },
 } as Meta;
-
-//  value: {control: 'text'},
 
 const Template: Story<InputProps> = args => <Input {...args}></Input>;
 export const InputComponent = Template.bind({});

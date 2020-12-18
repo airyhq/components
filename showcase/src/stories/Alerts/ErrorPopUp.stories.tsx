@@ -2,7 +2,6 @@ import React, {useState} from 'react';
 // also exported from '@storybook/react' if you can deal with breaking changes in 6.1
 import {Meta, Story} from '@storybook/react/types-6-0';
 
-//import '@airyhq/components/dist/main.css';
 import '@airyhq/components/dist/main.css';
 import {Button, ErrorPopUp} from '@airyhq/components';
 
@@ -13,7 +12,7 @@ export default {
   component: ErrorPopUp,
   parameters: {
     actions: {
-      handles: ['click', 'closeHandler'],
+      handles: ['click'],
     },
   },
 } as Meta;
