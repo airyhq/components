@@ -7,7 +7,7 @@ import {AiryLoader} from '@airyhq/components';
 type AiryLoaderProps = React.ComponentProps<typeof AiryLoader>;
 
 export default {
-  title: 'Example/ Loaders',
+  title: 'Airy Component/ Loaders',
   component: AiryLoader,
   parameters: {
     componentSubtitle: '',

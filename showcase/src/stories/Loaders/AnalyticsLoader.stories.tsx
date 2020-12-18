@@ -7,7 +7,7 @@ import {AnalyticsLoader} from '@airyhq/components';
 type AnalyticsLoaderProps = React.ComponentProps<typeof AnalyticsLoader>;
 
 export default {
-  title: 'Example/ Loaders',
+  title: 'Airy Component/ Loaders',
   component: AnalyticsLoader,
   parameters: {
     componentSubtitle: 'Airy Analytics Loader',
