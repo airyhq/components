@@ -15,9 +15,6 @@ export default {
   },
   parameters: {
     componentSubtitle: 'A button that looks like a link.',
-    actions: {
-      handles: ['click'],
-    },
   },
 } as Meta;
 
@@ -25,5 +22,5 @@ const Template: Story<LinkButtonProps> = args => <LinkButton {...args}>{args.chi
 
 export const LinkButtons = Template.bind({});
 LinkButtons.args = {
-  children: 'click me',
+  onClick: () => alert('Button Pressed'),
 };
