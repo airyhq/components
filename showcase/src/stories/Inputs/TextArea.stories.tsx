@@ -14,6 +14,9 @@ export default {
   },
   argTypes: {
     label: {control: 'text'},
+    inputmode: {
+      control: {type: 'select', options: ['text', 'none', 'tel', 'url', 'email', 'numeric', 'decimal', 'search']},
+    },
   },
 } as Meta;
 
@@ -25,6 +28,7 @@ DefaultTextArea.args = {
   value: 'Hello From Airy',
   label: 'Audience',
   placeholder: 'Set your audience here',
+  inputmode: 'text',
   name: 'audience',
   type: 'text',
   maxLength: 100,
