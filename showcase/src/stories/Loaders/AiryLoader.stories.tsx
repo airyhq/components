@@ -1,6 +1,5 @@
 import React from 'react';
 import {Meta, Story} from '@storybook/react/types-6-0';
-
 import '@airyhq/components/dist/main.css';
 import {AiryLoader} from '@airyhq/components';
 
@@ -10,7 +9,8 @@ export default {
   title: 'Airy Component/ Loaders',
   component: AiryLoader,
   parameters: {
-    componentSubtitle: '',
+    componentSubtitle:
+      'Airy Loaders: a small animation with an animated airy logo, a small animation with a loading hint for analytics, and a small UI hint indicating that some computation/loading is going on.',
   },
 } as Meta;
 
