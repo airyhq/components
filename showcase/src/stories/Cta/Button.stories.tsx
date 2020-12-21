@@ -22,7 +22,7 @@ export default {
   },
 } as Meta;
 
-const Template: Story<ButtonProps> = args => <Button {...args}>{args.children}</Button>;
+const Template: Story<ButtonProps> = args => <Button {...args}> {args.children}Click Me</Button>;
 
 export const ButtonComponent = Template.bind({});
 ButtonComponent.args = {

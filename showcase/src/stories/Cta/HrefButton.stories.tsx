@@ -36,5 +36,3 @@ HrefButtonComponent.args = {
   children: 'this is an Href Button',
   href: '/href-path',
 };
-
-// export const HyperLinkButton: React.VFC<{}> = () => <HrefButton href="#">Button Text</HrefButton>;
