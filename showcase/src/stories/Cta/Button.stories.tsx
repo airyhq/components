@@ -31,4 +31,5 @@ ButtonComponent.args = {
   disabled: false,
   onClick: () => alert('Button Pressed'),
   tabIndex: 0,
+  children: 'click me',
 };
