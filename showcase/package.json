@@ -29,7 +29,7 @@
     "format": "prettier './**/*.{ts,tsx}' --parser typescript --write && prettier './**/*.{css,scss}' --parser css --write",
     "lint": "prettier './**/*.{ts,tsx}' --parser typescript --check && prettier './**/*.{css,scss}' --parser css --check",
     "storybook": "start-storybook -p 6006 -s public",
-    "build-storybook": "build-storybook -s public"
+    "build-storybook": "build-storybook"
   },
   "devDependencies": {
     "@storybook/addon-actions": "^6.1.10",
