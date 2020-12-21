@@ -8,13 +8,13 @@ import {LinkButton} from '@airyhq/components';
 type LinkButtonProps = React.ComponentProps<typeof LinkButton>;
 
 export default {
-  title: 'Airy Component/Buttons',
+  title: 'Airy Components/CTA/LinkButton',
   component: LinkButton,
   argTypes: {
     children: {control: 'text'},
   },
   parameters: {
-    componentSubtitle: 'A button that looks like a link.',
+    componentSubtitle: `A button that looks like a link.`,
     actions: {
       handles: ['click'],
     },

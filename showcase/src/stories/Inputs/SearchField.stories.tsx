@@ -7,10 +7,10 @@ import {SearchField} from '@airyhq/components';
 type SearchFieldProps = React.ComponentProps<typeof SearchField>;
 
 export default {
-  title: 'Airy Component/ Search Field',
+  title: 'Airy Components/Inputs/Search Field',
   component: SearchField,
   parameters: {
-    componentSubtitle: 'This input can be used to search for information on the page displayed',
+    componentSubtitle: 'A input field with a search icon in front of it.',
   },
 } as Meta;
 

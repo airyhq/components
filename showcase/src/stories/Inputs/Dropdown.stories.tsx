@@ -6,13 +6,16 @@ import '@airyhq/components/dist/main.css';
 import {Dropdown} from '@airyhq/components';
 type DropdownProps = React.ComponentProps<typeof Dropdown>;
 export default {
-  title: 'Airy Component/Dropdown',
+  title: 'Airy Components/Inputs/Dropdown',
   component: Dropdown,
   parameters: {
-    componentSubtitle: 'This menu provides multiple options for the user to choose from',
+    componentSubtitle: 'A dropdown input that provides multiple options for the user to choose from.',
+    actions: {
+      handles: ['click'],
+    },
   },
   argTypes: {
-    options: {control: {type: 'select', options: ['Dropdown', 'Option A', 'Option B', 'Option C', 'Option D']}},
+    variant: {control: {type: 'select', options: ['borderless', 'default']}},
   },
 } as Meta;
 
@@ -22,8 +25,8 @@ const Template: Story<DropdownProps> = args => {
   return (
     <>
       <Dropdown
-        variant="default"
-        options={['Dropdown', 'Option A', 'Option B', 'Option C', 'Option D']}
+        variant={args.variant}
+        options={args.options}
         onClick={(item: string) => {
           setDropdownOption(item);
         }}
@@ -34,5 +37,6 @@ const Template: Story<DropdownProps> = args => {
 
 export const DropdownMenu = Template.bind({});
 DropdownMenu.args = {
-  options: 'Option A',
+  options: ['Dropdown', 'Option A', 'Option B', 'Option C', 'Option D'],
+  variant: 'default',
 };

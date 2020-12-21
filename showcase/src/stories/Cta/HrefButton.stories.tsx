@@ -1,33 +1,40 @@
 import React from 'react';
-import {MemoryRouter} from 'react-router-dom';
+import {Link, BrowserRouter} from 'react-router-dom';
 import {Meta, Story} from '@storybook/react/types-6-0';
-import '@airyhq/components/dist/main.css';
+import './hrefbutton.css';
 import {HrefButton} from '@airyhq/components';
 
 type HrefButtonProps = React.ComponentProps<typeof HrefButton>;
 
 export default {
-  title: 'Airy Component/Buttons',
+  title: 'Airy Components/CTA/Href Button',
   component: HrefButton,
   parameters: {
-    componentSubtitle: 'A link that looks like the CTA Button.',
+    componentSubtitle: 'A CTA button with a link that enables users to navigate within the application.',
+    actions: {
+      handles: ['click'],
+    },
   },
 } as Meta;
 
 const Template: Story<HrefButtonProps> = args => {
   return (
     <>
-      <MemoryRouter>
-        <HrefButton children="" href="Hello"></HrefButton>
-      </MemoryRouter>
+      <BrowserRouter>
+        <Link to={args.href}>
+          <div className="button">
+            <span className="buttonLabel">{args.children}</span>
+          </div>
+        </Link>
+      </BrowserRouter>
     </>
   );
 };
 
 export const HrefButtonComponent = Template.bind({});
 HrefButtonComponent.args = {
-  children: '',
-  href: 'hello',
+  children: 'this is an Href Button',
+  href: '/href-path',
 };
 
 // export const HyperLinkButton: React.VFC<{}> = () => <HrefButton href="#">Button Text</HrefButton>;

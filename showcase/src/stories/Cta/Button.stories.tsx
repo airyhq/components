@@ -8,7 +8,7 @@ import {Button} from '@airyhq/components';
 type ButtonProps = React.ComponentProps<typeof Button>;
 
 export default {
-  title: 'Airy Component/Buttons',
+  title: 'Airy Components/CTA/Button Component',
   component: Button,
   parameters: {
     componentSubtitle: 'A Button component.',
@@ -24,10 +24,13 @@ export default {
   },
 } as Meta;
 
-const Template: Story<ButtonProps> = args => <Button {...args}>Click Me</Button>;
+const Template: Story<ButtonProps> = args => <Button {...args}>{args.children}</Button>;
 
 export const ButtonComponent = Template.bind({});
 ButtonComponent.args = {
-  type: 'submit',
+  type: 'button',
   styleVariant: 'normal',
+  disabled: false,
+  children: 'Click Me',
+  tabIndex: 1,
 };

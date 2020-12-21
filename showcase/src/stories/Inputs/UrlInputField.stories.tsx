@@ -8,13 +8,20 @@ import {UrlInputField} from '@airyhq/components';
 type UrlInputFieldProps = React.ComponentProps<typeof UrlInputField>;
 
 export default {
-  title: 'Airy Component/URL Input',
+  title: 'Airy Components/Inputs/URL Input',
   component: UrlInputField,
   parameters: {
-    componentSubtitle: `This is a modified input field that accepts URLs. It also
+    componentSubtitle: `A modified input field that accepts URLs. It also
     tries to add "http://" if the user did not enter it.`,
     actions: {
       handles: ['change'],
+    },
+  },
+  argTypes: {
+    type: {control: {type: 'select', options: ['url']}},
+    fontClass: {control: {type: 'select', options: ['font-base', 'font-s', 'font-m', 'font-l', 'font-xl', 'font-xxl']}},
+    inputmode: {
+      control: {type: 'select', options: ['text', 'none', 'tel', 'url', 'email', 'numeric', 'decimal', 'search']},
     },
   },
 } as Meta;

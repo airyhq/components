@@ -8,13 +8,12 @@ import {Input} from '@airyhq/components';
 type InputProps = React.ComponentProps<typeof Input>;
 
 export default {
-  title: 'Airy Component/Inputs',
+  title: 'Airy Components/Inputs',
   component: Input,
   parameters: {
-    componentSubtitle:
-      'An input component with validation. It can be used for passwords and can display an emoji selector if needed.',
+    componentSubtitle: 'An input component with validation. It can also show the maximum number of characters left.',
     actions: {
-      handles: ['change'],
+      handles: ['oninput'],
     },
   },
   argTypes: {
@@ -30,8 +29,8 @@ export default {
 const Template: Story<InputProps> = args => <Input {...args}></Input>;
 export const InputComponent = Template.bind({});
 InputComponent.args = {
-  value: 'value',
   label: 'label',
+  value: 'value',
   hideLabel: false,
   name: 'name',
   checked: true,

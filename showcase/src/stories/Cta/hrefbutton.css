@@ -1,0 +1,19 @@
+.button {
+  display: inline-block;
+  border-radius: 4px;
+  background-color: var(--color-airy-blue);
+  cursor: pointer;
+  padding: 4px 16px;
+  text-decoration: none;
+}
+
+.button:hover {
+  background-color: var(--color-airy-blue-hover);
+  text-decoration: none;
+}
+
+.buttonLabel {
+  font-family: 'Lato', sans-serif;
+  color: white;
+  text-align: center;
+}

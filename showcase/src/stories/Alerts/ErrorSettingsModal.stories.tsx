@@ -8,8 +8,14 @@ import {Button, SettingsModal} from '@airyhq/components';
 type SettingsModalProps = React.ComponentProps<typeof SettingsModal>;
 
 export default {
-  title: 'Airy Component/Alerts',
+  title: 'Airy Components/Alerts/Error Settings Modal',
   component: SettingsModal,
+  parameters: {
+    actions: {
+      handles: ['click'],
+    },
+    componentSubtitle: 'An error modal component.',
+  },
 } as Meta;
 
 const Template: Story<SettingsModalProps> = args => {

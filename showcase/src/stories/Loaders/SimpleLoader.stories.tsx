@@ -7,8 +7,11 @@ import {SimpleLoader} from '@airyhq/components';
 type SimpleLoaderProps = React.ComponentProps<typeof SimpleLoader>;
 
 export default {
-  title: 'Airy Component/ Loaders',
+  title: 'Airy Components/Loaders/SimpleLoader',
   component: SimpleLoader,
+  parameters: {
+    componentSubtitle: 'A small UI hint demonstrating that some computation/loading is going on.',
+  },
 } as Meta;
 
 const Template: Story<SimpleLoaderProps> = () => <SimpleLoader />;

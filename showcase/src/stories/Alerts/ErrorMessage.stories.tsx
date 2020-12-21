@@ -6,8 +6,11 @@ import {ErrorMessage} from '@airyhq/components';
 type ErrorMessageProps = React.ComponentProps<typeof ErrorMessage>;
 
 export default {
-  title: 'Airy Component/Alerts',
+  title: 'Airy Components/Alerts/Error Message',
   component: ErrorMessage,
+  parameters: {
+    componentSubtitle: 'An error message component.',
+  },
 } as Meta;
 
 const Template: Story<ErrorMessageProps> = args => {
