@@ -1,9 +1,8 @@
 import React, {useState} from 'react';
 import {Story, Meta} from '@storybook/react/types-6-0';
-
 import '@airyhq/components/dist/main.css';
-
 import {Dropdown} from '@airyhq/components';
+
 type DropdownProps = React.ComponentProps<typeof Dropdown>;
 export default {
   title: 'Airy Components/Inputs/Dropdown',

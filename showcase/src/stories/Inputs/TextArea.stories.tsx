@@ -1,6 +1,5 @@
 import React from 'react';
 import {Meta, Story} from '@storybook/react/types-6-0';
-
 import '@airyhq/components/dist/main.css';
 import {TextArea} from '@airyhq/components';
 
@@ -16,6 +15,12 @@ export default {
     The textarea will automatically grow the height based on the content
     inside of it.`,
   },
+  argTypes: {
+    label: {control: 'text'},
+    inputmode: {
+      control: {type: 'select', options: ['text', 'none', 'tel', 'url', 'email', 'numeric', 'decimal', 'search']},
+    },
+  },
 } as Meta;
 
 const Template: Story<TextAreaProps> = (args: TextAreaProps) => <TextArea {...args}></TextArea>;
@@ -26,6 +31,7 @@ DefaultTextArea.args = {
   value: 'Hello From Airy',
   label: 'Audience',
   placeholder: 'Set your audience here',
+  inputmode: 'text',
   name: 'audience',
   type: 'text',
   maxLength: 100,
