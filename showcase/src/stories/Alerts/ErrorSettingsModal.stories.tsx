@@ -25,6 +25,7 @@ const Template: Story<SettingsModalProps> = args => {
   if (showModalPopUp) {
     modal = (
       <SettingsModal
+        children="this is a modal"
         style={{maxWidth: '420px'}}
         title={args.title}
         close={() => setShowModalPopUp(false)}></SettingsModal>

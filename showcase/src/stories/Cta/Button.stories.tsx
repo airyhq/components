@@ -27,7 +27,6 @@ const Template: Story<ButtonProps> = args => <Button {...args}> {args.children}<
 export const ButtonComponent = Template.bind({});
 ButtonComponent.args = {
   type: 'submit',
-  children: 'click me',
   styleVariant: 'normal',
   disabled: false,
   onClick: () => alert('Button Pressed'),
