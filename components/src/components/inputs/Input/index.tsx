@@ -402,10 +402,10 @@ export interface InputProps {
   validation?: any;
   type?: string;
   autoFocus?: boolean;
-  onChange?: (e: React.FormEvent<HTMLInputElement>) => void;
-  onFocus?: (e: React.FormEvent<HTMLInputElement>) => void;
-  onBlur?: (e: React.FormEvent<HTMLInputElement>) => void;
-  onKeyDown?: (e: React.FormEvent<HTMLInputElement>) => void;
+  onChange?: (e: React.ChangeEvent<HTMLInputElement>) => void;
+  onFocus?: (e: React.FocusEvent<HTMLInputElement>) => void;
+  onBlur?: (e: React.FocusEvent<HTMLInputElement>) => void;
+  onKeyDown?: (e: React.KeyboardEvent<HTMLInputElement>) => void;
   inputRef?: React.RefObject<HTMLInputElement>;
   /** Minimum length for validation */
   minLength?: number;
