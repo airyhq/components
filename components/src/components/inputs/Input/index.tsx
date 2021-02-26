@@ -92,6 +92,11 @@ class InputComponent extends Component<InputProps, IState> {
   checkWithURLValidation = inputElement => {
     this.checkWithHTML5Validation(inputElement);
 
+    if (!this.props.required && inputElement.value.length == 0) {
+      inputElement.setCustomValidity('');
+      return;
+    }
+
     /**
      * In #1106 Thomas described that he also wants to prevent
      * People to enter urls like http://example , which in itself
