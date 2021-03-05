@@ -285,6 +285,7 @@ class InputComponent extends Component<InputProps, IState> {
       pattern,
       showCounter,
       onFocus,
+      dataCy,
     } = this.props;
 
     const {validationResult, wasBlurred} = this.state;
@@ -362,6 +363,7 @@ class InputComponent extends Component<InputProps, IState> {
               disabled={disabled}
               pattern={pattern}
               inputMode={inputmode}
+              data-cy={dataCy}
             />
             {this.props.emoji ? (
               <div className={styles.emojiWrapper}>
@@ -455,6 +457,9 @@ export interface InputProps {
 
   // html5 input mode
   inputmode?: 'text' | 'none' | 'tel' | 'url' | 'email' | 'numeric' | 'decimal' | 'search';
+
+  // a handle for Cypress
+  dataCy?: string;
 }
 
 interface IState {
