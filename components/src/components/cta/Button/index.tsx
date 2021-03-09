@@ -29,9 +29,9 @@ export const Button = ({children, onClick, type, styleVariant, disabled, tabInde
       className={styleFor(styleVariant)}
       onClick={onClick}
       //@ts-ignore
-      tabIndex={tabIndex}>
+      tabIndex={tabIndex}
+      data-cy={dataCy}>
       {children}
-      data-cy={dataCy}
     </button>
   );
 };
