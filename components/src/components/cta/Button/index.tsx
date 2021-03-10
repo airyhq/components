@@ -2,7 +2,7 @@ import React, {ReactNode} from 'react';
 
 import styles from './style.module.scss';
 
-export const Button = ({children, onClick, type, styleVariant, disabled, tabIndex}: buttonProps) => {
+export const Button = ({children, onClick, type, styleVariant, disabled, tabIndex, dataCy}: buttonProps) => {
   const styleFor = variant => {
     switch (variant) {
       case 'small':
@@ -29,7 +29,8 @@ export const Button = ({children, onClick, type, styleVariant, disabled, tabInde
       className={styleFor(styleVariant)}
       onClick={onClick}
       //@ts-ignore
-      tabIndex={tabIndex}>
+      tabIndex={tabIndex}
+      data-cy={dataCy}>
       {children}
     </button>
   );
@@ -46,4 +47,6 @@ type buttonProps = {
   /** the button style variation */
   styleVariant?: 'small' | 'normal' | 'outline' | 'outline-big' | 'warning' | 'link' | 'text';
   tabIndex?: any;
+  /** a handle for Cypress */
+  dataCy?: string;
 };

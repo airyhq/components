@@ -32,6 +32,7 @@ class TextAreaComponent extends Component<IProps & InputProps> {
       required,
       fontClass,
       currentValidationState,
+      dataCy,
     } = props;
 
     const inputClass = `${styles.textarea} ${fontClass || 'font-l'} ${this.classForState(currentValidationState)}`;
@@ -52,6 +53,7 @@ class TextAreaComponent extends Component<IProps & InputProps> {
         required={required}
         rows={this.props.minRows}
         maxRows={this.props.maxRows}
+        data-cy={dataCy}
       />
     );
   };
