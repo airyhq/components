@@ -6,7 +6,7 @@ type ListenOutsideClickProps = {
   onOuterClick: () => void;
 };
 
-const ListenOutsideClick = ({children, className, onOuterClick}: ListenOutsideClickProps) => {
+export const ListenOutsideClick = ({children, className, onOuterClick}: ListenOutsideClickProps) => {
   const innerRef = useRef(null);
 
   useEffect(() => {
@@ -42,5 +42,3 @@ const ListenOutsideClick = ({children, className, onOuterClick}: ListenOutsideCl
     </div>
   );
 };
-
-export default ListenOutsideClick;
