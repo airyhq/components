@@ -75,7 +75,14 @@ class InputComponent extends Component<InputProps, IState> {
   };
 
   hasValidations = () => {
-    return this.props.required || this.props.minLength || this.props.maxLength || this.props.validation;
+    return (
+      this.props.type === 'url' ||
+      this.props.type === 'email' ||
+      this.props.required ||
+      this.props.minLength ||
+      this.props.maxLength ||
+      this.props.validation
+    );
   };
 
   checkWithValidationFunction = inputElement => {

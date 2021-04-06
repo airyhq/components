@@ -6,7 +6,7 @@ Without validation:
 <Input label="First name" placeholder="First name" hint="Homer, is this you?"/>
 ```
 
-Using a custom validation function that always red when shorter than 6 characters:
+Using a custom validation function that always turns red when shorter than 6 characters:
 
 ```jsx
 validation = (value) => {
