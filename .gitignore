@@ -3,3 +3,4 @@ showcase/yarn.lock
 node_modules/.yarn-integrity
 showcase/yarn.
 showcase/yarn.lock
+.DS_Store

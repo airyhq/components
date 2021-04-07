@@ -37,7 +37,7 @@ InputSecret.args = {
   inputmode: 'none',
   minLength: 0,
   maxLength: 12,
-  showErrors: true,
+  showErrors: false,
   autoFocus: false,
   required: true,
   autoComplete: 'on',
