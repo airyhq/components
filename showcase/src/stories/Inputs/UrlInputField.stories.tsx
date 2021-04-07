@@ -20,7 +20,7 @@ export default {
 const Template = args => {
   const [value, setValue] = useState('');
 
-  const handleChange = (e: any) => {
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     setValue(e.target.value);
   };
 
